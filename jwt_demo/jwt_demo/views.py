@@ -18,7 +18,7 @@ SECRET_KEY = settings.SECRET_KEY
 
 def login(request):
     """
-
+    Copy and paste this json below:
     {"user_name": "test_user_01", "user_psw": "321"}
     """
     post_name = request.data.get('user_name')
@@ -43,7 +43,7 @@ def login(request):
             # 'user_psw': "NEVER DO THIS"
             }
         jwt_token = jwt.encode(payload, SECRET_KEY, algorithm='HS256').decode('utf-8')
-        return Response({'Success': 'You got the token!',
+        return Response({"msg": 'You got the token!',
                          'JWT': jwt_token,
                          },
                         status =HTTP_200_OK)
@@ -57,12 +57,15 @@ def login(request):
 @api_view(['POST'])
 
 def test_token(request):
+    """
+    {"JWT":<Your Login JWT>}
+    """
     encoded_jwt = request.data.get('JWT')
     if encoded_jwt:
         try:
             decode_jwt = jwt.decode(encoded_jwt, SECRET_KEY, algorithms=['HS256'])
             return Response(
-                {'Success': "Token is still valid and active",
+                {"msg": "Token is still valid and active",
                  "Encoded_jwt": encoded_jwt,
                  "Decode_jwt": decode_jwt,
                  },
