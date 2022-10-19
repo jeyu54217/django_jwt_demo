@@ -17,6 +17,9 @@ SECRET_KEY = settings.SECRET_KEY
 @api_view(['POST'])
 
 def login(request):
+    """
+    {"user_name": "test_user_01", "user_psw": "321"}
+    """
     post_name = request.data.get('user_name')
     post_psw = request.data.get('user_psw')
     user_auth_check = User.objects.filter(user_name = post_name, user_password = post_psw)
@@ -48,7 +51,7 @@ def login(request):
             {'Error': 'Invalid credentials'},
             status = HTTP_404_NOT_FOUND
             )
-
+        
 @csrf_exempt
 @api_view(['POST'])
 
