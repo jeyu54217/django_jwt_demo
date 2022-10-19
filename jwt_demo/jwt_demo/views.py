@@ -55,7 +55,7 @@ def login(request):
 @csrf_exempt
 @api_view(['POST'])
 
-def test_api(request):
+def test_token(request):
     encoded_jwt = request.data.get('JWT')
     if encoded_jwt:
         try:
