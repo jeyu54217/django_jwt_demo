@@ -18,6 +18,7 @@ SECRET_KEY = settings.SECRET_KEY
 
 def login(request):
     """
+    sdfsdfsd
     {"user_name": "test_user_01", "user_psw": "321"}
     """
     post_name = request.data.get('user_name')
