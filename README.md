@@ -32,14 +32,16 @@ python3 manage.py runserver
 ### Login
 - URL: [http://127.0.0.1:8000/api/login](http://127.0.0.1:8000/api/login)
 - Method: POST
-- Body: 
-```bash
-{"user_name": "test_user_01", "user_psw": "321"}
-```
-- Response: {"msg": 'You got the token!', 'JWT':<Your Login JWT>,}
+- Body: {"user_name": "test_user_01", "user_psw": "321"}
+- Response: {"msg": 'You got the token!', 'JWT':< Your Login JWT>}
 
 ### Test_Token
 - URL: [http://127.0.0.1:8000/api/test_token](http://127.0.0.1:8000/api/test_token)
 - Method: POST
-- Token: {"JWT":<Your Login JWT>}
+- Token: {"JWT":< Your Login JWT>}
 - Response: {"msg": "Token is still valid and active"}
+### DEMO
+#### Login
+![image](https://github.com/jeyu54217/django_jwt_demo/blob/main/jwt_demo/img/login.png?raw=true)
+#### Test_Token
+![image](https://github.com/jeyu54217/django_jwt_demo/blob/main/jwt_demo/img/test_token.png?raw=true)
