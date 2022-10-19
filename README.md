@@ -46,7 +46,7 @@ python3 manage.py runserver
 ![image](https://github.com/jeyu54217/django_jwt_demo/blob/main/jwt_demo/img/test_token.png?raw=true)
 
 ## References
-- Introduction to JSON Web Tokens - JWT: [https://jwt.io/introduction](https://jwt.io/introduction)
+- [Introduction to JSON Web Tokens - JWT](https://jwt.io/introduction)
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
-- JSON Web Token (JWT) for OAuth Client Authorization Grants - IBM : [https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants](https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants)
-- pyjwt API Reference : [https://pyjwt.readthedocs.io/en/stable/api.html](https://pyjwt.readthedocs.io/en/stable/api.html)
+- [JSON Web Token (JWT) for OAuth Client Authorization Grants - IBM](https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants)
+- [pyjwt API Reference](https://pyjwt.readthedocs.io/en/stable/api.html)
