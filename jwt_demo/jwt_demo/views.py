@@ -1,13 +1,11 @@
-
-import json
 import jwt
 from jwt.exceptions import ExpiredSignatureError, InvalidSignatureError, DecodeError
 
 from datetime import timedelta, datetime
-from app.models import User
-
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
+
+from app.models import User
 
 from rest_framework.decorators import api_view
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND, HTTP_200_OK
@@ -86,8 +84,6 @@ def test_api(request):
             {'Error': 'Please paste your JWT'},
             status = HTTP_400_BAD_REQUEST
             )
-    
-    # {"JWT": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0X2p3dCIsImlzcyI6IkplcnJ5IFl1IiwiaWF0IjoxNjY2MTcxODU2LCJleHAiOjE2NjYxNzE5MTYsInVzZXJfbmFtZSI6InRlc3RfdXNlcl8wMSJ9.kKrIk6HaKASmxK2CAkkdH0ia-pt8SDrHd-uYkrwh8Lw"}
 
 
 """    
