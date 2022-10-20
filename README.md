@@ -37,7 +37,7 @@ python3 manage.py runserver
 ### Test_Token
 - URL: [http://127.0.0.1:8000/api/test_token](http://127.0.0.1:8000/api/test_token)
 - Method: POST
-- Token: {"JWT":< Your Login JWT>}
+- Body: {"JWT":< Your Login JWT>}
 - Response: {"msg": "Token is still valid and active"}
 ### DEMO
 #### Login
