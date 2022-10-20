@@ -48,7 +48,7 @@ def login(request):
                         status =HTTP_200_OK)
     else:
         return Response(
-            {'Error': 'Invalid credentials'},
+            {'Error': 'User Not Found'},
             status = HTTP_404_NOT_FOUND
             )
         
@@ -73,16 +73,16 @@ def test_token(request):
         except ExpiredSignatureError:
             return Response(
                 {'Error': "Token expired. Please get new one"},
-                status = HTTP_400_BAD_REQUEST
+                status = HTTP_404_NOT_FOUND
                 )
         except InvalidSignatureError:
             return Response(
-                {'Error': "Token expired. Please get new one"},
+                {'Error': "Token invalid. Please try new one"},
                 status = HTTP_400_BAD_REQUEST
                 )
         except DecodeError:
             return Response(
-                {'Error': "Invalid header string, Please check your JWT HEADERS"},
+                {'Error': "Token invalid. Please try new one"},
                 status = HTTP_400_BAD_REQUEST
                 )
     else:
