@@ -12,6 +12,7 @@ from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND, HTTP
 from rest_framework.response import Response
 
 SECRET_KEY = settings.SECRET_KEY
+TOKEN_EXPIRATION_TIME = timedelta(minutes = 2) 
 
 @csrf_exempt
 @api_view(['POST'])
@@ -34,7 +35,7 @@ def login(request):
             "sub" : "test_jwt",  # Subject
             "iss" : "Jerry Yu",  # Issuer
             'iat': datetime.now(),  # Issued At, Should be int
-            'exp': datetime.now() + timedelta(minutes = 1),  # Expiration Time, Should be int
+            'exp': datetime.now() + TOKEN_EXPIRATION_TIME,  # Expiration Time, Should be int
             # "aud" : "test_user",  # Audience
             # "jti" : None,  # JWT ID
             ## Privete claims
