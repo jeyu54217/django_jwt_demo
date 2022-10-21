@@ -25,7 +25,7 @@ from app.models import User
 User.objects.create(user_name="test_user_01", user_password="321")
 ```
 ```bash
-python3 manage.py runserver
+python3 manage.py runserver 8000
 ```
 #### API Test
 ```bash
