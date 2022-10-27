@@ -58,3 +58,4 @@ curl -d '{"JWT": "<Your JWT>"}' -H 'Content-Type: application/json' http://127.0
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
 - [JSON Web Token (JWT) for OAuth Client Authorization Grants - IBM](https://www.ibm.com/docs/en/was-liberty/base?topic=uocpao2as-json-web-token-jwt-oauth-client-authorization-grants)
 - [pyjwt API Reference](https://pyjwt.readthedocs.io/en/stable/api.html)
+
