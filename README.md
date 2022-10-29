@@ -20,19 +20,19 @@
 - Method: POST
 - Body: {"user_name": "test_user_01", "user_psw": "321"}
 - Response: {"msg": 'You got the token!', 'JWT':< Your Login JWT>}
-or
-```bash
-curl -d '{"user_name": "test_user_01", "user_psw": "321"}' -H 'Content-Type: application/json' http://127.0.0.1:8000/api/login
-```
+- or
+    ```bash
+    curl -d '{"user_name": "test_user_01", "user_psw": "321"}' -H 'Content-Type: application/json' http://127.0.0.1:8000/api/login
+    ```
 ### Test_Token
 - URL: [http://127.0.0.1:8000/api/test_token](http://127.0.0.1:8000/api/test_token)
 - Method: POST
 - Body: {"JWT":< Your Login JWT>}
 - Response: {"msg": "Token is still valid and active"}
-or
-```bash
-curl -d '{"JWT": "<Your JWT>"}' -H 'Content-Type: application/json' http://127.0.0.1:8000/api/test_token
-```
+- or
+    ```bash
+    curl -d '{"JWT": "<Your JWT>"}' -H 'Content-Type: application/json' http://127.0.0.1:8000/api/test_token
+    ```
 ### DEMO
 #### Login
 ![image](https://github.com/jeyu54217/django_jwt_demo/blob/main/jwt_demo/img/login.png?raw=true)
