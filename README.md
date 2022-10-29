@@ -1,16 +1,18 @@
 # django_jwt_demo
-## [Notes(Click)](https://github.com/jeyu54217/Study_Note/blob/main/Server/JWT.md)
+- [My Notes (click here)](https://github.com/jeyu54217/Study_Note/blob/main/Server/JWT.md)
 ## Setting Up
-#### Enviroment
-```git clone https://github.com/jeyu54217/django_jwt_demo.git```
-```python3 -m venv <proj_path>```
-```pip install -r requirements.txt```
-```cd jwt_demo```
-#### User Registration
-```python3 manage.py shell```
-```from app.models import User```
-```User.objects.create(user_name="test_user_01", user_password="321")```
-```python3 manage.py runserver 8000```
+### Enviroment
+- ```git clone https://github.com/jeyu54217/django_jwt_demo.git```
+- ```python3 -m venv <proj_path>```
+- ```pip install -r requirements.txt```
+- ```cd jwt_demo```
+- ```python3 manage.py makemigrations```
+- ```python3 manage.py migrate```
+### User Registration
+- ```python3 manage.py shell```
+- ```from app.models import User```
+- ```User.objects.create(user_name="test_user_01", user_password="321")```
+- ```python3 manage.py runserver 8000```
 
 ```
 ## API Test
