@@ -1,5 +1,5 @@
 # django_jwt_demo
-- [My Notes (click here)](https://github.com/jeyu54217/Study_Note/blob/main/Server/JWT.md)
+- See also : [My Notes (click here)](https://github.com/jeyu54217/Study_Note/blob/main/Server/JWT.md)
 ## Setting Up
 ### Enviroment
 - ```git clone https://github.com/jeyu54217/django_jwt_demo.git```
