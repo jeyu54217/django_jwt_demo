@@ -1,15 +1,27 @@
-import jwt
-from jwt.exceptions import ExpiredSignatureError, InvalidSignatureError, DecodeError
+from app.models import User
 
-from datetime import timedelta, datetime
+import jwt
+from jwt.exceptions import (
+    ExpiredSignatureError, 
+    InvalidSignatureError, 
+    DecodeError,
+)
+
+from datetime import (
+    timedelta, 
+    datetime,
+)
 from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 
-from app.models import User
-
 from rest_framework.decorators import api_view
-from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_404_NOT_FOUND, HTTP_200_OK
+)
 from rest_framework.response import Response
+from rest_framework.status import (
+    HTTP_400_BAD_REQUEST, 
+    HTTP_404_NOT_FOUND, 
+    HTTP_200_OK,
+)
 
 SECRET_KEY = settings.SECRET_KEY
 TOKEN_EXPIRATION_TIME = timedelta(minutes = 2) 
