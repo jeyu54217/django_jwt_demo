@@ -76,12 +76,7 @@ def test_token(request):
                 {'Error': "Token expired. Please get new one"},
                 status = HTTP_404_NOT_FOUND
                 )
-        except InvalidSignatureError:
-            return Response(
-                {'Error': "Token invalid. Please try new one"},
-                status = HTTP_400_BAD_REQUEST
-                )
-        except DecodeError:
+        except (InvalidSignatureError, DecodeError):
             return Response(
                 {'Error': "Token invalid. Please try new one"},
                 status = HTTP_400_BAD_REQUEST
