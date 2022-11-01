@@ -14,7 +14,6 @@
 - ```User.objects.create(user_name="test_user_01", user_password="321")```
 - ```python3 manage.py runserver 8000```
 
-
 ## API Test
 ### Login
 - URL: [http://127.0.0.1:8000/api/login](http://127.0.0.1:8000/api/login)
