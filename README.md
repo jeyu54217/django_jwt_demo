@@ -44,3 +44,4 @@
 - [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)
 - [pyjwt API Reference](https://pyjwt.readthedocs.io/en/stable/api.html)
 
+
