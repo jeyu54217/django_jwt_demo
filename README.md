@@ -1,5 +1,5 @@
 # django_jwt_demo
-- [Notes](https://github.com/jeyu54217/Study_Note/blob/main/Server/JWT.md)
+- [Notes](https://github.com/jeyu54217/Notes/blob/main/Web/Security/JWT.md)
 ## Setting Up
 ### Enviroment
 
